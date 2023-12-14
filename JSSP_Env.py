@@ -94,11 +94,8 @@ class SJSSP(gym.Env, EzPickle):
 
         # initialize adj matrix
         conj_nei_up_stream = np.eye(self.number_of_tasks, k=-1, dtype=np.single)
-        conj_nei_low_stream = np.eye(self.number_of_tasks, k=1, dtype=np.single)
         # first column does not have upper stream conj_nei
         conj_nei_up_stream[self.first_col] = 0
-        # last column does not have lower stream conj_nei
-        conj_nei_low_stream[self.last_col] = 0
         self_as_nei = np.eye(self.number_of_tasks, dtype=np.single)
         self.adj = self_as_nei + conj_nei_up_stream
 
