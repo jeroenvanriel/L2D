@@ -1,7 +1,7 @@
-FROM nvidia/cuda:10.2-cudnn8-devel-ubuntu18.04
+FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu18.04
 
 # pay attention ARG "cuda_ver" should match base image above
-ARG cuda_ver=cu102
+ARG cuda_ver=cu118
 # python 3.7.9
 ARG miniconda_ver=Miniconda3-py37_4.9.2-Linux-x86_64.sh
 ARG project=l2d
